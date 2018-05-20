@@ -1,0 +1,38 @@
+@charset "utf-8";
+//首页变量
+$color-black:#444444;
+$color-darkred:#A51937;//深红
+$color-pink:#f1bdc9;
+$color-whit:#ffffff;
+$color-palered:#d22147;//浅红
+$color-lightgrey:#F2F2F2;//浅灰
+$color-darkgrey:#999999;//深灰
+//字体大小
+$fontsize-12:12px;
+$fontsize-13:13px;
+$fontsize-15:15px;
+$fontsize-18:18px;
+$fontsize-28:28px;
+
+@mixin border($bdwidth,$bdstyle,$bdcolor){
+    border:$bdwidth $bdstyle $bdcolor
+};
+@mixin box($width,$height,$backgroundcolor){
+    width:$width;
+    height:$height;
+    background-color:$backgroundcolor;
+}
+@mixin radius($radius:5px){
+    -webkit-border-radius: $radius;
+    -o-border-radius: $radius;
+    -moz-border-radius: $radius;
+    -ms-border-radius: $radius;
+}
+%ellipsis{//占位继承
+    text-overflow: ellipsis;
+   white-space: nowrap;
+   overflow: hidden;
+}
+//站位继承使用 .div2{
+ //   @extend %ellipsis
+//}
